@@ -1,0 +1,149 @@
+#--------------------------------------------------------------------
+# Example Environment Configuration file
+#
+# This file can be used as a starting point for your own
+# custom .env files, and contains most of the possible settings
+# available in a default install.
+#
+# By default, all of the settings are commented out. If you want
+# to override the setting, you must un-comment it by removing the '#'
+# at the beginning of the line.
+#--------------------------------------------------------------------
+
+#--------------------------------------------------------------------
+# ENVIRONMENT
+#--------------------------------------------------------------------
+
+CI_ENVIRONMENT = development
+
+#--------------------------------------------------------------------
+# APP
+#--------------------------------------------------------------------
+
+app.baseURL = 'http://localhost/'
+app.forceGlobalSecureRequests = false
+
+app.sessionDriver =  'CodeIgniter\Session\Handlers\FileHandler'
+#'CodeIgniter\Session\Handlers\DatabaseHandler'
+app.sessionCookieName = 'webapp_session'
+#app.sessionSavePath = 'ci_sessions'
+app.sessionMatchIP = true #false
+app.sessionTimeToUpdate = 300
+app.sessionRegenerateDestroy = false
+
+app.cookiePrefix = ''
+app.cookieDomain = ''
+app.cookiePath = '/'
+app.cookieSecure = false
+app.cookieHTTPOnly = false
+app.cookieSameSite = 'Lax'
+
+app.CSRFProtection  = true
+app.CSRFTokenName   = 'csrf_webapp'
+app.CSRFCookieName  = 'csrf_cookie_webapp'
+app.CSRFExpire      = 7200
+app.CSRFRegenerate  = true
+app.CSRFExcludeURIs = []
+app.CSRFSameSite    = 'Lax'
+
+app.CSPEnabled = false
+
+#--------------------------------------------------------------------
+# DATABASE
+#--------------------------------------------------------------------
+
+database.default.hostname = localhost
+database.default.database = web_multi_language
+database.default.username = root
+database.default.password = 
+database.default.DBDriver = MySQLi
+
+# database.tests.hostname = localhost
+# database.tests.database = ci4
+# database.tests.username = root
+# database.tests.password = root
+# database.tests.DBDriver = MySQLi
+
+#--------------------------------------------------------------------
+# CONTENT SECURITY POLICY
+#--------------------------------------------------------------------
+
+# contentsecuritypolicy.reportOnly = false
+# contentsecuritypolicy.defaultSrc = 'none'
+# contentsecuritypolicy.scriptSrc = 'self'
+# contentsecuritypolicy.styleSrc = 'self'
+# contentsecuritypolicy.imageSrc = 'self'
+# contentsecuritypolicy.base_uri = null
+# contentsecuritypolicy.childSrc = null
+# contentsecuritypolicy.connectSrc = 'self'
+# contentsecuritypolicy.fontSrc = null
+# contentsecuritypolicy.formAction = null
+# contentsecuritypolicy.frameAncestors = null
+# contentsecuritypolicy.mediaSrc = null
+# contentsecuritypolicy.objectSrc = null
+# contentsecuritypolicy.pluginTypes = null
+# contentsecuritypolicy.reportURI = null
+# contentsecuritypolicy.sandbox = false
+# contentsecuritypolicy.upgradeInsecureRequests = false
+
+#--------------------------------------------------------------------
+# ENCRYPTION
+#--------------------------------------------------------------------
+
+encryption.key = hex2bin:473a292e18a5a864e3967c4bcc1bc62318d3fe00d31e340e97bdfa2a893ab042
+encryption.driver = OpenSSL
+encryption.blockSize = 16
+encryption.digest = SHA512
+
+#--------------------------------------------------------------------
+# HONEYPOT
+#--------------------------------------------------------------------
+
+honeypot.hidden = 'true'
+honeypot.label = 'webapp Fill'
+honeypot.name = 'webapp_honey'
+honeypot.template = '<label>{label}</label><input type="text" name="{name}" value=""/>'
+honeypot.container = '<div style="display:none">{template}</div>'
+
+#--------------------------------------------------------------------
+# SECURITY
+#--------------------------------------------------------------------
+
+security.tokenName  = 'csrf_webapp'
+security.headerName = 'X-CSRF-TOKEN'
+security.cookieName = 'csrf_cookie_webapp'
+security.expires    = 7200
+security.regenerate = true
+security.redirect   = true
+security.samesite   = 'Lax'
+
+#--------------------------------------------------------------------
+# LOGGER
+#--------------------------------------------------------------------
+
+# logger.threshold = 4
+
+#--------------------------------------------------------------------
+# EMAIL
+#--------------------------------------------------------------------
+
+email.protocol = 'smtp'
+email.SMTPHost = 'smtp.gmail.com'
+email.SMTPPort = 587
+email.SMTPUser = 'paredbaez.martin@gmail.com'
+email.SMTPPass = 'seyfyvkaygxebvwy'
+email.SMTPCrypto = 'tls'
+email.mailType = 'html'
+
+#--------------------------------------------------------------------
+# ReCaptcha 2
+#--------------------------------------------------------------------
+recaptcha2.key = '6LcjBygcAAAAAAoXLwpe8PVmpUKKYxocS1QmMkLH'
+recaptcha2.secret = '6LcjBygcAAAAAIJUNBJ9ZVKMRsY5iJJCcUScOSjE'
+
+#--------------------------------------------------------------------
+# ReCaptcha 3
+#--------------------------------------------------------------------
+#recaptcha3.key = 'XXXXXXXX-XXXXXXXX'
+#recaptcha3.secret = 'XXXXXXXX-XXXXXXXX'
+#recaptcha3.scoreThreshold = 0.5
